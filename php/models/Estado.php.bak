@@ -1,0 +1,40 @@
+<?php
+class Estado extends Doctrine_Record {
+	public function setTableDefinition() {
+		$this->setTableName('estado');
+		$this->hasColumn('contenido','string',50);
+	}
+	
+	static public function aceptada () {
+		return Doctrine::getTable('estado')->findOneByContenido('aceptada');
+	}
+	
+	static public function rechazada () {
+		return Doctrine::getTable('estado')->findOneByContenido('rechazada');
+	}
+	
+	static public function finalizada () {
+		return Doctrine::getTable('estado')->findOneByContenido('finalizada');
+	}
+	
+	static public function pendiente () {
+		return Doctrine::getTable('estado')->findOneByContenido('pendiente');
+	}
+	
+	static public function leido () {
+		return Doctrine::getTable('estado')->findOneByContenido('leido');
+	}
+	
+	static public function noLeido () {
+		return Doctrine::getTable('estado')->findOneByContenido('no leido');
+	}
+	
+	static public function comprada () {
+		return Doctrine::getTable('estado')->findOneByContenido('comprada');
+	}
+	
+	static public function borrada () {
+		return Doctrine::getTable('estado')->findOneByContenido('borrada');
+	}
+}
+?>

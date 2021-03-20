@@ -1,0 +1,12 @@
+CREATE TABLE `lista_precio` (
+	`id` TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`material` VARCHAR(255) NULL DEFAULT NULL,
+	`precio_kg` FLOAT(10,2) NULL DEFAULT NULL,
+	`variacion_precio` FLOAT(10,2) NULL DEFAULT NULL,
+	`variacion_porcentaje` FLOAT(10,2) NULL DEFAULT NULL,
+	`slug` VARCHAR(255) NULL DEFAULT NULL,
+	`created_at` DATETIME NOT NULL,
+	`updated_at` DATETIME NOT NULL,
+	PRIMARY KEY (`id`)
+)
+ENGINE=InnoDB  DEFAULT CHARSET=latin1;
